@@ -19,7 +19,7 @@ const About = () => {
   }, []);
 
   return (
-    <section className="">
+    <section className="overflow-hidden">
       <Transition/>
       <div
         id="About"
@@ -145,9 +145,9 @@ const About = () => {
           viewport={{ once: false, amount: 0.7 }}
           className=" flex"
         >
-          <h1 className="flex ml-8 p-2 lg:p-5  text-xl mr-4 lg:-mt-3  lg:text-xl font-bold hover:scale-105 rounded-xl  cursor-pointer ">
+          <h1 className="flex ml-3 md:ml-8 p-2 lg:p-5  md:text-xl md:mr-4 lg:-mt-3  lg:text-xl font-bold hover:scale-105 rounded-xl  cursor-pointer ">
             {new Date().getDate()}- {new Date().getMonth()} - {new Date().getFullYear()} </h1>
-            <p className="flex jus text-center text-2xl gap-6 lg:text-3xl lg:gap-52 ">
+            <p className="flex  text-center mt-1 md:mt-0 text-xl md:text-2xl gap-6 lg:text-3xl lg:gap-52 ">
             &copy;Greebloo <AiFillInstagram className="mt-1 duration-500 cursor-pointer hover:scale-125  " /> <AiFillFacebook  className="mt-1 duration-500 cursor-pointer hover:scale-125 "/> <AiFillGithub className="mt-1 duration-500 cursor-pointer hover:scale-125  " />{" "}
               <AiOutlineWhatsApp className="mt-1 duration-500 cursor-pointer hover:scale-125  " />{" "}
             </p>

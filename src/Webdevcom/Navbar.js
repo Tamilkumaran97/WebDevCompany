@@ -32,18 +32,18 @@ const Navbar = () => {
   };
 
   return (
-    <section id="nav1" className="">
+    <section id="nav1" className="overflow-x-visible">
       <Transition />
       {/**Onclick event */}
 
-      <div>
+      <div >
         {menu ? (
           <div className="lg:hidden fixed z-50">
             {}
             <IoCloseSharp
               onClick={menuShow}
               size={35}
-              className="mt-7 mb-5 ml-[427px] duration-500 hover:scale-110  hover:bg-black bg-black/40  rounded-xl cursor-pointer text-white"
+              className="absolute z-50 mt-7 mb-5 ml-[310px] sm:ml-[580px] md:ml-[713px] duration-500 hover:scale-110  hover:bg-black bg-black/40  rounded-xl cursor-pointer text-white"
             />
             <div className="  z-50 p-  mx-auto w-screen h-screen mr-4  bg-white/30 backdrop-blur-xl rounded-lg font-bold text-black flex-col flex   gap-6 items-center cursor-pointer  ">
               <Link
@@ -109,7 +109,7 @@ const Navbar = () => {
         )}
       </div>
       <div className="">
-        <div className="dark:bg-black/80 dark:h-full bg-[#FFB400]  h-[1000px]   rounded-lg  lg:h-full">
+        <div className="dark:bg-black/80 dark:h-full bg-[#FFB400]  h-[1000px]   rounded-lg  lg:h-screen">
           <motion.div
             initial={{ y: -400 }}
             animate={{ y: 0 }}
@@ -120,10 +120,10 @@ const Navbar = () => {
               {/*Logo */}
               <div
                 onClick={() => setTheme(nextTheme)}
-                className="  lg:flex  w-[55px]  lg:w-[50px]   "
+                className="  lg:flex  w-[40px] md:w-[55px]  lg:w-[50px]   "
               >
                 <img
-                  className="-mt-2 lg:flex lg:mt-2 cursor-pointer animate-bounce rounded-full"
+                  className="mt-2 md:-mt-2 lg:flex lg:mt-2 cursor-pointer animate-bounce rounded-full"
                   src={Pic}
                   alt="img"
                 />
@@ -132,7 +132,7 @@ const Navbar = () => {
                 {!menu ? (
                   <div
                     onClick={menuShow}
-                    className="cursor-pointer  lg:hidden "
+                    className="relative cursor-pointer  lg:hidden "
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

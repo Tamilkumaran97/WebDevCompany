@@ -15,40 +15,40 @@ const Home = () => {
   } 
   return (
 
-    <section>
+    <section className="overflow-x-hidden">
       {
-        !open ? <div>
+        !open ? <div className="">
            <video
-        className="fixed w-screen h-screen lg:w-screen lg:h-screen object-cover"
+        className="fixed  w-screen h-screen lg:w-screen lg:h-screen object-cover"
         src={videoBg}
         autoPlay
         loop
         muted
       ></video>
-      <div className="p-2 lg:px-10">
+      <div className=" p-2 lg:px-10">
         <motion.div
           initial={{ x: -250 }}
           animate={{ x: -10 }}
           transition={{ delay: 2, type: "spring" }}
-          className="absolute z-10 mt-[182px] lg:mt-28"
+          className="absolute z-10  mt-[220px] md:mt-[182px] lg:mt-28"
         >
-          <img className=" w-[100px] lg:w-[200px] " src={Image} alt="img" />
+          <img className="w-[70px] md:w-[100px] lg:w-[200px] " src={Image} alt="img" />
         </motion.div>
-        <div>
+        <div className="">
           <motion.div
             initial={{ y: 450 }}
             animate={{ y: 0 }}
             transition={{ delay: 5, type: "tween", duration: 1 }}
             className="absolute flex justify-center items-center"
           >
-            <div className="absolute container p-10 w-40 h-40 lg:w-80 lg:h-80 rounded-full top-10  bg-yellow-300"></div>
+            <div className="lg:absolute container p-10 w-40 h-40 lg:w-80 lg:h-80 rounded-full top-10 hidden  bg-yellow-500"></div>
           </motion.div>
 
           <motion.div
             initial={{ y: -400 }}
             animate={{ y: 0 }}
             transition={{ delay: 5, type: "tween", duration: 1 }}
-            className="absolute lg:left-[1200px] left-[400px] mt-24 lg:mt-1 container p-10 w-40 h-40 lg:w-80 lg:h-80  rounded-full top-10  bg-orange-500"
+            className="absolute lg:left-[1200px]  left-[300px] md:left-[400px] mt-24 lg:mt-1 container p-10 w-40 h-40 lg:w-80 lg:h-80  rounded-full top-10 hidden  bg-orange-500"
           ></motion.div>
 
           <motion.div
@@ -110,10 +110,10 @@ const Home = () => {
           </motion.div>
         </div>
       </div>
-        </div> : <Navbar/>
+        </div> : <Navbar className=""/>
       }
      
-      
+     
     </section>
   );
 };

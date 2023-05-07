@@ -11,7 +11,7 @@ const Contact = () => {
   const rotateY = useTransform(x, [-100, 100], [-30, 30]);
 
   return (
-    <section className="dark:bg-transparent bg-gray-400 p-10 text-gray-900 mt-5  rounded" id="link">
+    <section className="overflow-hidden dark:bg-transparent bg-gray-400 p-10 text-gray-900 mt-5  rounded" id="link">
       <Transition/>
       <div className="container mx-auto ">
         <div className="lg:flex flex-warp ">
@@ -48,7 +48,7 @@ const Contact = () => {
                   style={{ x, y, rotateX, rotateY, z: 100000 }}
                 >
                   <img
-                    className="absolute  w-[300px] -top-72 -right-5 drop-shadow-[0_35px_35px_rgb(0,255,225)]  dark:drop-shadow-[0_35px_35px_rgb(0,0,0)]
+                    className="absolute w-[200px] lg:w-[300px] -top-72 -right-5 drop-shadow-[0_35px_35px_rgb(0,255,225)]  dark:drop-shadow-[0_35px_35px_rgb(0,0,0)]
                  "
                     src={Image}
                     draggable="false"

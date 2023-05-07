@@ -57,9 +57,9 @@ const Services = () => {
   ];
 
   return (
-    <>
+    <section className="overflow-hidden">
       <Transition />
-      <div id="ser" className="dark:bg-transparent bg-[#c2e812] rounded-xl   mt-2">
+      <div id="ser" className="dark:bg-transparent  bg-[#c2e812] rounded-xl   mt-2">
         <motion.div
           variants={fadeIn("left", 0.6)}
           initial="hidden"
@@ -67,7 +67,7 @@ const Services = () => {
           viewport={{ once: false, amount: 0.7 }}
           className="text-center lg:mx-32 p-8 lg:p-10"
         >
-          <h1 className="text-3xl font-bold uppercase mx-24 lg:mx-96 duration-500 hover:bg-black/20 cursor-pointer rounded-xl p-2 shadow-lg shadow-black">
+          <h1 className="text-3xl font-bold uppercase mx-26 md:mx-24 lg:mx-96 duration-500 hover:bg-black/20 cursor-pointer rounded-xl p-2 shadow-lg shadow-black">
             {" "}
             Services
           </h1>
@@ -99,7 +99,7 @@ const Services = () => {
                 onClick={() => {
                   setSelected(data);
                 }}
-                className="dark:bg-gray-800/40 bg-yellow-500 shadow-xl shadow-black/20 hover:shadow-green-500 hover:shadow-2xl p-10 rounded-xl cursor-pointer text-center "
+                className="dark:bg-gray-800 bg-yellow-500 shadow-xl shadow-black/20 hover:shadow-green-500 dark:hover:bg-gray-500 hover:shadow-2xl p-10 rounded-xl cursor-pointer text-center "
                 key={data.id}
               >
                 <h1 key={data.id} className="text-xl  mb-3 font-bold">
@@ -109,7 +109,7 @@ const Services = () => {
                 <p className="mb-6" key={data.id}>
                   {data.paragraph}{" "}
                 </p>
-                <button className="dark:bg-black/30 bg-[#c2e812] px-8 py-1 rounded-xl font-semibold hover:bg-black/20 duration-500 ">
+                <button className="dark:bg-black/30 bg-[#c2e812] px-8 py-1 rounded-xl font-semibold  hover:bg-black/20 duration-500 ">
                   Open
                 </button>
               </motion.div>
@@ -124,7 +124,7 @@ const Services = () => {
                   >
                     <div
                       onClick={(e) => e.stopPropagation()}
-                      className="w-[700px]  rounded-xl p-10 overflow-hidden backdrop-blur-lg"
+                      className="w-[700px]  rounded-xl p-10 overflow-hidden "
                     >
                       <motion.div
                         initial={{ scale: 0 }}
@@ -148,7 +148,7 @@ const Services = () => {
           ))}
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

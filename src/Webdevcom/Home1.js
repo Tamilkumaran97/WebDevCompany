@@ -12,9 +12,9 @@ const Home1 = () => {
   const [isopen, setIsOpen] = useState(false);
 
   return (
-    <section>
+    <section  >
       <Transition />
-      <div id="Home" className=" container ">
+      <div id="Home" className=" container overflow-hidden ">
         <div className="container mx-auto ">
           {/**Divided into three container */}
           <div className=" lg:flex -mt-28">
@@ -31,7 +31,7 @@ const Home1 = () => {
                 <span className="text-white dark:text-black  text-2xl font-semibold">
                   I'm
                 </span>{" "}
-                <span className="text-2xl dark:text-black">
+                <span className="text-xl md:text-2xl lg:text-2xl dark:text-black">
                   <TypeAnimation
                     sequence={[
                       ` Greebloo,`,
@@ -83,7 +83,7 @@ const Home1 = () => {
                   className="relative"
                 >
                   <img
-                    className="w-[300px] lg:w-[350px] rounded-full dark:drop-shadow-[0_35px_35px_rgb(0,0,0)]  drop-shadow-[0_35px_35px_rgb(255,255,0)] duration-1000 hover:scale-110 cursor:pointer"
+                    className="w-[300px] lg:w-[350px] rounded-full dark:drop-shadow-none  drop-shadow-[0_35px_35px_rgb(255,255,0)] duration-1000 hover:scale-110 cursor:pointer"
                     src={Img}
                     alt=""
                   />
@@ -98,7 +98,7 @@ const Home1 = () => {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.7 }}
-                className="font-semibold text-center text-lg  lg:text-lg mt-40 lg:mt-48 lg:mr-8"
+                className="font-semibold text-center  md:text-lg  lg:text-lg mt-40 lg:mt-48 lg:mr-8"
               >
                 "Design is not just what it look like its feel like."
               </motion.h1>
@@ -129,14 +129,13 @@ const Home1 = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 1 }}
-                        className="text-center z-50 flex flex-warp w-[300px] mx-auto  pt-2 text-sm"
+                        className="text-center z-50 flex flex-warp w-[210px] lg:w-[300px]  pt-2 text-sm"
                       >
                         "Passionate , driven , and always eager to learn - I am
                         dedicated to making a positive impact and bringing my
-                        best to every opportunity. With a strong work ethic and
-                        willingness to take on new challenges, I am excited to
+                        best to every opportunity.  I am excited to
                         bring my unique skills and perspectives to your team.
-                        Let's work together to create something amazing"
+                      
                       </motion.p>
                     )}
                   </motion.div>
@@ -171,8 +170,8 @@ const Home1 = () => {
                 {isopen ? (
                   ""
                 ) : (
-                  <div className=" ml-32   lg:ml-24">
-                    <img className="w-[200px] dark:drop-shadow-[0_35px_35px_rgb(0,255,255)] " src={Img3} alt="" />
+                  <div className=" ml-24    lg:ml-24">
+                    <img className="w-[200px]  " src={Img3} alt="" />
                   </div>
                 )}
               </motion.div>

@@ -5,12 +5,8 @@ import Navbar from "./Webdevcom/Navbar.js";
 function App() {
   return (
     <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/nav" element={<Navbar />} />
-        </Routes>
-      </BrowserRouter>
+      <Home/>
+     
     </div>
   );
 }

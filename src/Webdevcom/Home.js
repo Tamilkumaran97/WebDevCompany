@@ -1,14 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { fadeIn } from "../Varient.js";
 import Image from "./WhatsApp_Image_2023-04-30_at_01.59.00-removebg-preview.png";
 import videoBg from "./pexels-enrique-hoyos-3571264-3840x2160-30fps.mp4";
+import { Link } from "react-scroll";
+import Navbar from "./Navbar.js";
 
 const Home = () => {
+  const [open ,setOpen] = useState(false)
+  const openNav= () => {
+    setOpen(!open)
+
+  } 
   return (
+
     <section>
-      <video
+      {
+        !open ? <div>
+           <video
         className="fixed w-screen h-screen lg:w-screen lg:h-screen object-cover"
         src={videoBg}
         autoPlay
@@ -88,18 +98,22 @@ const Home = () => {
             transition={{ delay: 1, duration: 2 }}
             className="flex justify-center items-center"
           >
-            <motion.a
+            <Link onClick={openNav}
               initial={{ x: +2500 }}
               animate={{ x: 10 }}
               transition={{ delay: 5, type: "spring", stiffness: 120 }}
-              href="/nav"
-              className=" p-2 px-5 rounded-xl mt-8 shadow-lg shadow-black font-bold backdrop-blur-lg "
+              to="nav1"
+              className=" p-2 px-5 cursor-pointer rounded-xl mt-8 shadow-lg shadow-black font-bold backdrop-blur-lg "
             >
               Get started
-            </motion.a>
+            </Link>
           </motion.div>
         </div>
       </div>
+        </div> : <Navbar/>
+      }
+     
+      
     </section>
   );
 };
